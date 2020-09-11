@@ -9,7 +9,6 @@ class Whatsappbot(object):
         opcoes.add_argument('lang=pt-br')
         self.driver = webdriver.Chrome(executable_path=r'./chromedriver')
 
-
     def EnviarMensagens(self):
         self.driver.get('https://web.whatsapp.com')
         time.sleep(10) # time.spleep() é usado para não sobregarregar a pagina por fazer varias ações muito rapdio
@@ -29,8 +28,6 @@ class Whatsappbot(object):
             time.sleep(3)
             botão_enviar.click()
             time.sleep(5)
-
-
 
 bot = Whatsappbot()
 bot.EnviarMensagens()
